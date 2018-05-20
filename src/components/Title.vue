@@ -18,18 +18,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-$default-font: 'Source Sans Pro', sans-serif;
-
+@mixin center-align {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 h1 {
   font-weight: 700;
-  margin: 0;
+  @include center-align;
 }
 
 h2 {
   font-weight: 300;
+  @include center-align;
 }
 
 .start {
-  font-family: $default-font;
+  height: 100vh;
+  width: 100vw;
 }
 </style>
