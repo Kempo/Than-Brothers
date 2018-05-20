@@ -19,6 +19,7 @@ $default-font: 'Source Sans Pro', sans-serif;
   height: 100vh;
   width: 100vw;
   font-family: $default-font;
+  font-weight: 300;
 }
 body {
   margin: 0;

@@ -1,6 +1,6 @@
-# ptb-website
+# Pho Than Brothers
 
-> vue-js website 
+> created for Chi. developed with VueJS, Webpack, SCSS, and other utilities.
 
 ## Build Setup
 
@@ -23,5 +23,3 @@ npm run unit
 # run all tests
 npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
