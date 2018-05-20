@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Introduction from '@/components/Introduction'
+import Title from '@/components/Title'
 import NotFound from '@/components/Error'
+import Test from '@/components/Test'
 
 Vue.use(Router)
 
@@ -9,8 +10,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Introduction', // doesn't have to be Introduction, name is even optional
-      component: Introduction
+      components: {
+        title: Title,
+        test: Test
+      }
     },
     {
       path: '*',

@@ -7,11 +7,10 @@
 
 <script>
 export default {
-  name: 'Introduction', // doesn't have to be Introduction
   data () {
     return {
       title: 'Pho Than Brothers',
-      desc: 'By Aaron Chen'
+      desc: 'Exquisite Vietnamese Fare'
     }
   }
 }
