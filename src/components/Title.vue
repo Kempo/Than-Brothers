@@ -1,6 +1,6 @@
 <template>
   <div class="start">
-    <h1>{{ title }}</h1>
+    <h1 id="title">{{ title }}</h1>
     <h2>{{ desc }}</h2>
   </div>
 </template>
@@ -24,13 +24,13 @@ export default {
   top: 50%;
   transform: translateY(-50%);
 }
-h1 {
-  font-weight: 700;
+#title {
+  font-weight: $bold-default;
   @include center-align;
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: $thin-default;
   @include center-align;
 }
 

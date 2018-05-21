@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'Error',
+  name: 'Error-page',
   data () {
     return {
       home: '/' // link to return back to first website
