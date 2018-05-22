@@ -1,7 +1,7 @@
 <template>
   <div id="error">
-    <a v-bind:href='home'> <img src="@/assets/logo.png"> </a>
-    <h1> 404 - NOT FOUND. </h1>
+    <h1> 404 - NOT FOUND.</h1>
+    <h1> <a v-bind:href='home'> HOME </a> </h1>
   </div>
 </template>
 
@@ -16,8 +16,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   h1 {
     color: red;
+    font-style: normal;
+    @include center-align;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: green;
+  }
+  #error {
+    width: 100vw;
+    height: 100vh;
   }
 </style>

@@ -2,3 +2,9 @@ $default-color: #000000;
 $default-font: 'Source Sans Pro', sans-serif;
 $thin-default: 300;
 $bold-default: 700;
+@mixin center-align {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
