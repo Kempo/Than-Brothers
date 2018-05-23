@@ -41,6 +41,10 @@ h2 {
   @include center-align;
 }
 
+#nav-item {
+  margin-right: 10px;
+}
+
 .start {
   height: 100vh;
   width: 100vw;
@@ -63,7 +67,7 @@ h2 {
 
 #nav-item {
   font-size: 2em;
-  font-weight: 700;
+  font-weight: $bold-default;
 }
 
 </style>
