@@ -1,4 +1,3 @@
-$default-color: #000000;
 $default-font: 'Source Sans Pro', sans-serif;
 $thin-default: 300;
 $bold-default: 700;
@@ -6,5 +5,7 @@ $bold-default: 700;
   margin: 0;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-80%);
 }
+$bgwidth: 800px;
+$bgheight: 531px;

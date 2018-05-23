@@ -1,7 +1,7 @@
 <template>
   <div id="main">
     <router-view name="TitleSection"> </router-view> <!-- utilises the title and test router views -->
-    <router-view name="TestSection"> </router-view>
+    <router-view name="MenuSection"> </router-view>
     <router-view/> <!-- default router view; intended for the 404 error-->
   </div>
 </template>
@@ -11,7 +11,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $default-color;
   height: 100%;
   width: 100%;
   font-family: $default-font;
@@ -19,5 +18,10 @@
 }
 body {
   margin: 0;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 </style>

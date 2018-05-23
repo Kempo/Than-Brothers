@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 
 Vue.config.productionTip = false
+Vue.prototype.$authorName = 'Aaron Chen'
 
 /* eslint-disable no-new */
 new Vue({
@@ -12,4 +13,9 @@ new Vue({
   router,
   components: { App },
   template: '<App/>' // crucial for rendering
+  /*
+  beforeCreate: function () {
+    console.log(this.$authorName) // for testing purposes
+  }
+  */
 })
