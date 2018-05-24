@@ -1,10 +1,10 @@
 <template>
-  <div class="start">
+  <div id="start">
     <header id="top">
       <div id="nav">
-      <a id="nav-item" href="#menu_section"> menu </a>
-      <a id="nav-item" href="/"> locations </a>
-      <a id="nav-item" href="/"> contact </a>
+      <a class="nav-item" href="#menu_section"> menu </a>
+      <a class="nav-item" href="/"> locations </a>
+      <a class="nav-item" href="/"> contact </a>
       </div>
     </header>
 
@@ -23,7 +23,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -31,7 +30,7 @@ export default {
 #title {
   font-size: 4em;
   font-weight: $bold-default;
-  @include center-align;
+  @include center-align(-130%);
 }
 
 h2 {
@@ -41,11 +40,7 @@ h2 {
   @include center-align;
 }
 
-#nav-item {
-  margin-right: 10px;
-}
-
-.start {
+#start {
   height: 100vh;
   width: 100vw;
   background-image: url('../assets/background.jpg');
@@ -65,9 +60,13 @@ h2 {
   padding: 20px;
 }
 
-#nav-item {
+#nav {
   font-size: 2em;
   font-weight: $bold-default;
+}
+
+.nav-item {
+  margin-right: 10px;
 }
 
 </style>

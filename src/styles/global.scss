@@ -1,11 +1,11 @@
 $default-font: 'Source Sans Pro', sans-serif;
 $thin-default: 300;
 $bold-default: 700;
-@mixin center-align {
+@mixin center-align($percent: -100%) {
   margin: 0;
   position: relative;
   top: 50%;
-  transform: translateY(-80%);
+  transform: translateY($percent);
 }
 $bgwidth: 800px;
 $bgheight: 531px;
