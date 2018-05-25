@@ -13,9 +13,9 @@ $bgheight: 531px;
   font-size: 3em;
 }
 
-@mixin section-div-style() {
+@mixin section-div-style($padding) {
   text-align: left;
-  padding: 50px;
+  padding: $padding;
 }
 
 @mixin section-item() {
@@ -24,6 +24,16 @@ $bgheight: 531px;
 }
 .individual-item {
   @include section-item;
+}
+@media screen and (max-width: 320px) {
+  .section {
+      @include section-div-style(20px);
+  }
+}
+@media screen and (min-width: 321px) {
+  .section {
+      @include section-div-style(50px);
+  }
 }
 ///
 /// Viewport sized typography with minimum and maximum values

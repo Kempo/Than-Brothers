@@ -1,5 +1,5 @@
 <template>
-<div id="location_section">
+<div class="section">
   <h1> locations </h1>
   <Location
     v-for="loc in list"
@@ -30,8 +30,5 @@ export default {
 <style lang="scss" scoped>
 h1 {
   @include section-title-size;
-}
-#location_section {
-  @include section-div-style;
 }
 </style>

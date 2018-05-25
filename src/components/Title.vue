@@ -19,7 +19,7 @@ export default {
   data () {
     return {
       title: 'Pho Than Brothers',
-      desc: 'Lorem ipsum dolor sit amet, cum cu verear.'
+      desc: 'Affordable, Authentic, and Delicious.'
     }
   }
 }
@@ -27,6 +27,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@media screen and (max-width: 320px) {
+  #title {
+    font-size: 2em;
+  }
+  #desc {
+    font-size: 1em;
+  }
+}
 @media screen and (max-width: 469px) { // breakpoint at 469 or smaller
   #nav {
     @include responsive-font(2vw, 1.4em, 1.99em, 18px);
@@ -35,7 +43,7 @@ export default {
     text-align: center;
   }
   #desc {
-    @include center-align(-100%);
+    @include center-align(-200%);
   }
 }
 
@@ -58,7 +66,7 @@ export default {
 }
 
 #desc {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: $thin-default;
   font-style: italic;
 }
