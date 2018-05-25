@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Title from '@/components/Title'
 import NotFound from '@/components/Error'
 import Menu from '@/components/Menu'
+import Locations from '@/components/Locations'
 
 Vue.use(Router)
 
@@ -12,7 +13,8 @@ export default new Router({
       path: '/',
       components: {
         TitleSection: Title,
-        MenuSection: Menu
+        MenuSection: Menu,
+        LocationSection: Locations
       }
     },
     {

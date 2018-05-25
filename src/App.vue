@@ -2,6 +2,7 @@
   <div id="main">
     <router-view name="TitleSection"> </router-view> <!-- utilises the title and test router views -->
     <router-view name="MenuSection"> </router-view>
+    <router-view name="LocationSection"> </router-view>
     <router-view/> <!-- default router view; intended for the 404 error-->
   </div>
 </template>

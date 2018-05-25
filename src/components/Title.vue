@@ -3,13 +3,13 @@
     <header id="top">
       <div id="nav">
       <a class="nav-item" href="#menu_section"> menu </a>
-      <a class="nav-item" href="/"> locations </a>
+      <a class="nav-item" href="#location_section"> locations </a>
       <a class="nav-item" href="/"> contact </a>
       </div>
     </header>
 
     <h1 id="title">{{ title }}</h1>
-    <h2>{{ desc }}</h2>
+    <h2 id="desc">{{ desc }}</h2>
     <!-- <img src="@/assets/background.jpg"> -->
   </div>
 </template>
@@ -27,22 +27,44 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@media screen and (max-width: 469px) { // breakpoint at 469 or smaller
+  #nav {
+    @include responsive-font(2vw, 1.4em, 1.99em, 18px);
+  }
+  #top {
+    text-align: center;
+  }
+  #desc {
+    @include center-align(-100%);
+  }
+}
+
+@media screen and (min-width: 470px) { // breakpoint at 470 or higher
+  #nav {
+    @include responsive-font(3vw, 2em, 4em, 18px);
+  }
+  #top {
+    text-align: left;
+  }
+  #desc {
+    @include center-align(-150%);
+  }
+}
+
 #title {
   font-size: 4em;
   font-weight: $bold-default;
   @include center-align(-130%);
 }
 
-h2 {
+#desc {
   font-size: 3em;
   font-weight: $thin-default;
   font-style: italic;
-  @include center-align;
 }
 
 #start {
   height: 100vh;
-  width: 100vw;
   background-image: url('../assets/background.jpg');
   /* Center and scale the image nicely */
   background-position: center;
@@ -53,7 +75,6 @@ h2 {
 }
 
 #top {
-  text-align: left;
   background-color: white;
   opacity: 1;
   color: black;
@@ -61,7 +82,6 @@ h2 {
 }
 
 #nav {
-  font-size: 2em;
   font-weight: $bold-default;
 }
 

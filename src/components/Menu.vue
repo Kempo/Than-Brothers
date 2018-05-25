@@ -24,7 +24,8 @@ export default {
     return {
       items: [
         {num: 1, title: 'Pho Bo Tai', desc: 'Description 1'},
-        {num: 2, title: 'Pho Tai Chin', desc: 'Description 2'}
+        {num: 2, title: 'Pho Bo Tai Chin', desc: 'Description 2'},
+        {num: 3, title: 'Pho Bo Tai Nam', desc: 'Description 3'}
       ]
     }
   }
@@ -33,12 +34,9 @@ export default {
 
 <style lang="scss" scoped>
   h1 {
-    font-weight: $bold-default;
-    font-size: 3em;
+    @include section-title-size;
   }
   #menu_section {
-    text-align: left;
-    margin: auto;
-    padding: 50px;
+    @include section-div-style;
   }
 </style>
