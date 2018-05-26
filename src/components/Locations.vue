@@ -1,11 +1,11 @@
 <template>
 <div class="section">
-  <h1> locations </h1>
+  <h1> <span class="section-title-bar"/> locations </h1>
   <Location
     v-for="loc in list"
     v-bind:key="loc.id"
     v-bind:loc-name="loc.title"
-    v-bind:address="loc.address"
+    v-bind:Address="loc.address"
   />
 </div>
 </template>
@@ -19,8 +19,18 @@ export default {
   data () {
     return {
       list: [
-        {id: 1, title: 'Location 1', address: 'Address 1'},
-        {id: 2, title: 'Location 2', address: 'Address 2'}
+        {id: 1, title: 'Aurora', address: '7800 Aurora Ave. N, Seattle WA'},
+        {id: 2, title: 'Broadway', address: '527 Broadway E, Seattle WA'},
+        {id: 3, title: 'University of Washington', address: '4207 University Way, Seattle WA'},
+        {id: 4, title: 'Ballard', address: '2021 NW Market St, Seattle WA'},
+        {id: 5, title: 'Junction', address: '4822 California Ave SW, Seattle WA'},
+        {id: 6, title: 'Everett', address: '500 SE Everett Mall Way, Everett WA'},
+        {id: 7, title: 'Crossroads', address: '1299 156th Ave NE, Bellevue WA'},
+        {id: 8, title: 'Queen Anne', address: '8 W Mercer St, Seattle WA'},
+        {id: 9, title: 'Wallingford', address: '2309 N 45th St, Seattle WA'},
+        {id: 10, title: 'Tacoma', address: '1712 Pacific Ave, Tacoma WA'},
+        {id: 11, title: 'Lynnwood', address: '16809 Highway 99, Lynnwood WA'},
+        {id: 12, title: 'Fremont', address: '626 N 34th St, Seattle WA'}
       ]
     }
   }

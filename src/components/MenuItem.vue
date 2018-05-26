@@ -1,7 +1,7 @@
 <template>
   <div class="individual-item">
   <h2> {{itemNum}}. {{itemTitle}} </h2>
-  <p> {{itemDesc}} </p>
+  <p> w/ {{itemDesc}} </p>
   </div>
 </template>
 

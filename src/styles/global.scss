@@ -1,14 +1,23 @@
 $default-font: 'Source Sans Pro', sans-serif;
 $thin-default: 300;
 $bold-default: 700;
+$bgwidth: 800px;
+$bgheight: 531px;
+
+.section-title-bar {
+    width: 10px;
+    background-color: black;
+    height: 2px;
+    display: none; // inline-block if u want it to be visible
+    vertical-align: middle;
+}
+
 @mixin center-align($percent: -100%) {
   margin: 0;
   position: relative;
   top: 50%;
   transform: translateY($percent);
 }
-$bgwidth: 800px;
-$bgheight: 531px;
 @mixin section-title-size() {
   font-size: 3em;
 }
@@ -18,13 +27,23 @@ $bgheight: 531px;
   padding: $padding;
 }
 
-@mixin section-item() {
+@mixin section-item($w) {
   display: inline-block;
   padding: 20px;
+  width: $w; // make it width: 300 or something when it's not mobile.
 }
-.individual-item {
-  @include section-item;
+
+@media screen and (max-width: 420px) {
+  .individual-item {
+    @include section-item(auto);
+  }
 }
+@media screen and (min-width: 421px) {
+  .individual-item {
+    @include section-item(425px);
+  }
+}
+
 @media screen and (max-width: 320px) {
   .section {
       @include section-div-style(20px);
@@ -32,7 +51,7 @@ $bgheight: 531px;
 }
 @media screen and (min-width: 321px) {
   .section {
-      @include section-div-style(50px);
+      @include section-div-style(40px);
   }
 }
 ///

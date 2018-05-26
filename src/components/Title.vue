@@ -77,7 +77,7 @@ export default {
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: ($bgwidth + 400) ($bgheight + 400);
+  background-size: ($bgwidth + 300) ($bgheight + 300);
   max-width:100%; // gets rid of extra horizontal scrollbar
   color: white;
 }
