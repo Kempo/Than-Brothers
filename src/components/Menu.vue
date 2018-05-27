@@ -14,10 +14,10 @@
       v-bind:item-desc="item.desc"
     />
 
-    <h2> Other <span class="title-desc"> rice noodle soup with other choices </span> </h2>
+    <h2> Other <span class="title-desc">  </span> </h2>
     <MenuItem item-title='Pho Ga' item-num='A' item-desc='shredded chicken'/>
     <MenuItem item-title='Pho Bo Vien' item-num='B' item-desc='succulent meat balls'/>
-    <MenuItem item-title='Pho Chay (V)' item-num='V' item-desc='tofu, mushroom, carrots, and broccoli'/>
+    <MenuItem item-title='Pho Chay (vegetarian)' item-num='V' item-desc='tofu, mushroom, carrots, and broccoli'/>
   </div>
 </template>
 

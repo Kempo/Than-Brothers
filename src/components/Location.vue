@@ -1,12 +1,17 @@
 <template>
   <div class="individual-item">
-  <h2> <a href=""> {{LocName}} </a> </h2>
+  <h2> <a :href='getLink' target="_blank"> {{LocName}} </a> </h2>
   <p> {{Address}} </p>
   </div>
 </template>
 <script>
 export default {
-  props: ['LocName', 'Address']
+  props: ['LocName', 'Address'],
+  computed: {
+    getLink: function () {
+      return ('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(this.Address))
+    }
+  }
 }
 </script>
 
@@ -21,7 +26,10 @@ h2 {
 }
 a {
   text-decoration: none;
-  color: blue;
+  color: $blue;
+}
+a:hover {
+  color: $red;
 }
 .individual-item {
   font-size: 1em;

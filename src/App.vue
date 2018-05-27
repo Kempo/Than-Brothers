@@ -17,6 +17,7 @@
   width: 100%;
   font-family: $default-font;
   font-weight: $thin-default;
+  overflow-x: hidden;
 }
 body {
   margin: 0;

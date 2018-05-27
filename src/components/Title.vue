@@ -27,12 +27,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 331px) {
   #title {
     font-size: 2em;
   }
   #desc {
     font-size: 1em;
+  }
+}
+@media screen and (min-width: 332px) {
+  #title {
+    font-size: 4em;
+  }
+  #desc {
+    font-size: 2em;
   }
 }
 @media screen and (max-width: 469px) { // breakpoint at 469 or smaller
@@ -60,13 +68,11 @@ export default {
 }
 
 #title {
-  font-size: 4em;
   font-weight: $bold-default;
   @include center-align(-130%);
 }
 
 #desc {
-  font-size: 2em;
   font-weight: $thin-default;
   font-style: italic;
 }
@@ -77,7 +83,7 @@ export default {
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: ($bgwidth + 300) ($bgheight + 300);
+  background-size: ($bgwidth + 200) ($bgheight + 200);
   max-width:100%; // gets rid of extra horizontal scrollbar
   color: white;
 }
@@ -97,4 +103,7 @@ export default {
   margin-right: 10px;
 }
 
+a:hover {
+  color: $red;
+}
 </style>
