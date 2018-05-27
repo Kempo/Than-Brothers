@@ -13,7 +13,17 @@ $blue: #6d9eeb;
     display: none; // inline-block if u want it to be visible
     vertical-align: middle;
 }
-
+.title-desc {
+  font-size: .8em;
+  font-weight: $thin-default;
+  white-space: nowrap;
+}
+#line-separator {
+  width: 50vw;
+  height: 3px;
+  background-color: black;
+  border-style: none;
+}
 @mixin center-align($percent: -100%) {
   margin: 0;
   position: relative;

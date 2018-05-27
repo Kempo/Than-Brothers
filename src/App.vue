@@ -2,8 +2,8 @@
   <div id="main">
     <router-view name="TitleSection"> </router-view>
     <router-view name="MenuSection"> </router-view>
-    <hr id="line-separator">
     <router-view name="LocationSection"> </router-view>
+    <router-view name="ContactSection"> </router-view>
     <router-view/> <!-- default router view; intended for the 404 error-->
   </div>
 </template>
@@ -26,11 +26,5 @@ body {
 a {
   text-decoration: none;
   color: black;
-}
-#line-separator {
-  width: 50vw;
-  height: 3px;
-  background-color: black;
-  border-style: none;
 }
 </style>

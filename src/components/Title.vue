@@ -4,7 +4,7 @@
       <div id="nav">
       <a class="nav-item" href="#menu_section"> menu </a>
       <a class="nav-item" href="#location_section"> locations </a>
-      <a class="nav-item" href="/"> contact </a>
+      <a class="nav-item" href="#contact_section"> contact </a>
       </div>
     </header>
 
@@ -45,7 +45,7 @@ export default {
 }
 @media screen and (max-width: 469px) { // breakpoint at 469 or smaller
   #nav {
-    @include responsive-font(2vw, 1.4em, 1.99em, 18px);
+    @include responsive-font(2vw, 1.2em, 1.99em, 18px);
   }
   #top {
     text-align: center;
