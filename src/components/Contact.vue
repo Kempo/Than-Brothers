@@ -2,6 +2,7 @@
   <footer id="contact_section">
     <p> {{ email }} </p>
     <p> {{ address }} </p>
+    <p> {{phone}} </p>
   </footer>
 </template>
 
@@ -10,7 +11,8 @@ export default {
   data () {
     return {
       email: 'chi@thanbrothers.com',
-      address: 'PO BOX 27529 Seattle, WA 98165'
+      address: 'PO BOX 27529 Seattle, WA 98165',
+      phone: '(206) 527-5973'
     }
   }
 }

@@ -23,7 +23,7 @@ export default {
     return {
       t1: 'Pho',
       t2: 'Than Brothers',
-      desc: 'Authentic, Affordable, and Delicious.'
+      desc: 'An invigorating and satisfying experience.'
     }
   }
 }
