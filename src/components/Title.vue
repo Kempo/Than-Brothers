@@ -79,21 +79,22 @@ export default {
 }
 
 #t1 {
-  color: $blue; // blue
+  //color: $blue; // blue
 }
 #t2 {
-  color: $blue; // red
+  //color: $red; // red
 }
 
 #desc {
   font-weight: $thin-default;
   font-style: italic;
+  color: white;
 }
 
 #start {
   height: 100vh;
   background-image: url('../assets/background.jpg');
-  background-color: #efefef;
+  background-color: white;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -101,7 +102,7 @@ export default {
   //background-size: cover;
   width: 100%;
   max-width:100%; // gets rid of extra horizontal scrollbar
-  color: white;
+  color: #A0DCFF;
 }
 
 #top {
