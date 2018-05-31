@@ -10,6 +10,7 @@
       v-bind:key="loc.id"
       v-bind:loc-name="loc.title"
       v-bind:Address="loc.address"
+      v-bind:Phone="loc.phone"
       />
     </div>
   </div>
@@ -24,18 +25,18 @@ export default {
   data () {
     return {
       list: [
-        {id: 1, title: 'Aurora', address: '7800 Aurora Ave. N, Seattle WA'},
-        {id: 2, title: 'Broadway', address: '527 Broadway E, Seattle WA*'},
-        {id: 3, title: 'University of Washington', address: '4207 University Way, Seattle WA'},
-        {id: 4, title: 'Ballard', address: '2021 NW Market St, Seattle WA*'},
-        {id: 5, title: 'Junction', address: '4822 California Ave SW, Seattle WA*'},
-        {id: 6, title: 'Everett', address: '500 SE Everett Mall Way, Everett WA'},
-        {id: 7, title: 'Crossroads', address: '1299 156th Ave NE, Bellevue WA'},
-        {id: 8, title: 'Queen Anne', address: '8 W Mercer St, Seattle WA*'},
-        {id: 9, title: 'Wallingford', address: '2309 N 45th St, Seattle WA*'},
-        {id: 10, title: 'Tacoma', address: '1712 Pacific Ave, Tacoma WA**'},
-        {id: 11, title: 'Lynnwood', address: '16809 Highway 99, Lynnwood WA'},
-        {id: 12, title: 'Fremont', address: '626 N 34th St, Seattle WA*'}
+        {id: 1, title: 'Aurora', address: '7800 Aurora Ave. N, Seattle WA', phone: '(206) 527-5973'},
+        {id: 2, title: 'Broadway', address: '527 Broadway E, Seattle WA*', phone: '(206) 568-7218'},
+        {id: 3, title: 'University of Washington', address: '4207 University Way, Seattle WA', phone: '(206) 632-7272'},
+        {id: 4, title: 'Ballard', address: '2021 NW Market St, Seattle WA*', phone: '(206) 782-5715'},
+        {id: 5, title: 'Junction', address: '4822 California Ave SW, Seattle WA*', phone: '(206) 937-6264'},
+        {id: 6, title: 'Everett', address: '500 SE Everett Mall Way, Everett WA', phone: '(425) 353-8906'},
+        {id: 7, title: 'Crossroads', address: '1299 156th Ave NE, Bellevue WA', phone: '(425) 818-4905'},
+        {id: 8, title: 'Queen Anne', address: '8 W Mercer St, Seattle WA*', phone: '(206) 327-9699'},
+        {id: 9, title: 'Wallingford', address: '2309 N 45th St, Seattle WA*', phone: '(206) 632-7378'},
+        {id: 10, title: 'Tacoma', address: '1712 Pacific Ave, Tacoma WA**', phone: '(253) 272-2249'},
+        {id: 11, title: 'Lynnwood', address: '16809 Highway 99, Lynnwood WA', phone: '(425) 999-6596'},
+        {id: 12, title: 'Fremont', address: '626 N 34th St, Seattle WA*', phone: '(206) 915-1928'}
       ],
       times: [
         { id: 1, time: 'DAILY 10 - 9' },

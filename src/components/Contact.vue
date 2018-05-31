@@ -1,6 +1,7 @@
 <template>
   <footer id="contact_section">
-    <p> {{ email }}   |   {{ address }}</p>
+    <p> {{ email }} </p>
+    <p> {{ address }} </p>
   </footer>
 </template>
 
@@ -24,5 +25,7 @@ export default {
   }
   p {
     margin: 0;
+    white-space: pre;
+    display: inline-block;
   }
 </style>

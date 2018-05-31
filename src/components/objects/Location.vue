@@ -2,11 +2,12 @@
   <div class="individual-item">
   <h2> <a :href='getLink' target="_blank"> {{LocName}} </a> </h2>
   <p> {{Address}} </p>
+  <p> {{Phone}} </p>
   </div>
 </template>
 <script>
 export default {
-  props: ['LocName', 'Address'],
+  props: ['LocName', 'Address', 'Phone'],
   computed: {
     getLink: function () {
       return ('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(this.Address))

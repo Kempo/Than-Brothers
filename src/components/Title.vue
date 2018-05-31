@@ -8,7 +8,10 @@
       </div>
     </header>
 
-    <h1 id="title">{{ title }}</h1>
+    <div id="title">
+      <span id="t1"> {{ t1 }} </span>
+      <span id="t2"> {{ t2 }} </span>
+    </div>
     <h2 id="desc">{{ desc }}</h2>
     <!-- <img src="@/assets/background.jpg"> -->
   </div>
@@ -18,8 +21,9 @@
 export default {
   data () {
     return {
-      title: 'Pho Than Brothers',
-      desc: 'Affordable, Authentic, and Delicious.'
+      t1: 'Pho',
+      t2: 'Than Brothers',
+      desc: 'Authentic, Affordable, and Delicious.'
     }
   }
 }
@@ -37,13 +41,14 @@ export default {
 }
 @media screen and (min-width: 332px) {
   #title {
-    font-size: 4em;
+    //font-size: 3em;
+    @include responsive-font(6vw, 3em, 5em, 18px);
   }
   #desc {
     font-size: 2em;
   }
 }
-@media screen and (max-width: 469px) { // breakpoint at 469 or smaller
+@media screen and (max-width: 584px) { // breakpoint at 469 or smaller
   #nav {
     @include responsive-font(2vw, 1.2em, 1.99em, 18px);
   }
@@ -51,11 +56,11 @@ export default {
     text-align: center;
   }
   #desc {
-    @include center-align(-200%);
+    @include center-align(-120%);
   }
 }
 
-@media screen and (min-width: 470px) { // breakpoint at 470 or higher
+@media screen and (min-width: 585px) { // breakpoint at 470 or higher
   #nav {
     @include responsive-font(3vw, 2em, 4em, 18px);
   }
@@ -69,7 +74,15 @@ export default {
 
 #title {
   font-weight: $bold-default;
+  text-transform: uppercase;
   @include center-align(-130%);
+}
+
+#t1 {
+  color: $blue; // blue
+}
+#t2 {
+  color: $blue; // red
 }
 
 #desc {
@@ -80,10 +93,13 @@ export default {
 #start {
   height: 100vh;
   background-image: url('../assets/background.jpg');
+  background-color: #efefef;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: ($bgwidth + 200) ($bgheight + 200);
+  //background-size: ($bgwidth) ($bgheight);
+  //background-size: cover;
+  width: 100%;
   max-width:100%; // gets rid of extra horizontal scrollbar
   color: white;
 }

@@ -2,10 +2,6 @@
 <div id="menu_section">
   <div class="section">
     <h1> <span class="section-title-bar"/> menu </h1>
-      <!--<MenuItem item-title='Pho Bo Tai' item-desc='Description 1'/>
-      <MenuItem item-title='Pho Tai Chin' item-desc='Description 2'/>
-    -->
-
     <h2> Pho Bo <span class="title-desc"> rice noodle soup with beef </span></h2>
     <MenuItem
     v-for="item in beef"
@@ -15,9 +11,9 @@
     v-bind:item-desc="item.desc"
     />
 
-    <h2> Other <span class="title-desc">  </span> </h2>
+    <h2> Other <span class="title-desc"> rice noodle soup variations  </span> </h2>
     <MenuItem item-title='Pho Ga' item-num='A' item-desc='shredded chicken'/>
-    <MenuItem item-title='Pho Bo Vien' item-num='B' item-desc='succulent meat balls'/>
+    <MenuItem item-title='Pho Bo Vien' item-num='B' item-desc='meat balls'/>
     <MenuItem item-title='Pho Chay (vegetarian)' item-num='V' item-desc='tofu, mushroom, carrots, and broccoli'/>
   </div>
   <hr id="line-separator">
