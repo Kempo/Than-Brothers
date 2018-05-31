@@ -1,6 +1,6 @@
 # Pho Than Brothers
 
-> created for Chi. developed with VueJS, Webpack, SCSS, and other utilities.
+> Developed with VueJS, Webpack, SCSS, and other utilities.
 
 ## Build Setup
 
