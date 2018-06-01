@@ -6,6 +6,7 @@ $bgheight: 531px;
 
 $red: #dd7e6b;
 $blue: #6d9eeb;
+
 .section-title-bar {
     width: 10px;
     background-color: black;
@@ -18,8 +19,18 @@ $blue: #6d9eeb;
   font-weight: $thin-default;
   white-space: nowrap;
 }
-#line-separator {
-  width: 50vw;
+
+.down-arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+}
+
+.line-separator {
+  width: 25vw;
   height: 3px;
   background-color: black;
   border-style: none;
@@ -49,10 +60,17 @@ $blue: #6d9eeb;
   .individual-item {
     @include section-item(auto);
   }
+  form {
+    width: 280px;
+  }
 }
 @media screen and (min-width: 421px) {
   .individual-item {
     @include section-item(425px);
+  }
+  form {
+    width: 40vw;
+    max-width: 700px;
   }
 }
 

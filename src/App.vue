@@ -1,9 +1,9 @@
 <template>
   <div id="main">
-    <router-view name="TitleSection"> </router-view>
-    <router-view name="MenuSection"> </router-view>
-    <router-view name="LocationSection"> </router-view>
-    <router-view name="ContactSection"> </router-view>
+    <router-view name="TitleSection"/>
+    <router-view name="MenuSection"/>
+    <router-view name="LocationSection"/>
+    <router-view name="ContactSection"/>
     <router-view/> <!-- default router view; intended for the 404 error-->
   </div>
 </template>

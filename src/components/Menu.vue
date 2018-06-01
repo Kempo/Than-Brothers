@@ -16,7 +16,7 @@
     <MenuItem item-title='Pho Bo Vien' item-num='B' item-desc='meat balls'/>
     <MenuItem item-title='Pho Chay (vegetarian)' item-num='V' item-desc='tofu, mushroom, carrots, and broccoli'/>
   </div>
-  <hr id="line-separator">
+  <hr class="line-separator">
 </div>
 </template>
 

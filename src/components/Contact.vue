@@ -1,8 +1,25 @@
 <template>
   <footer id="contact_section">
-    <p> {{ email }} </p>
-    <p> {{ address }} </p>
-    <p> {{phone}} </p>
+    <hr class="line-separator"/>
+    <h1> Contact </h1>
+    <form @submit="checkForm" method="POST" v-bind:action="getLink">
+      <div id="other">
+      <p>{{ address }} </p>
+      <p>{{ phone }} </p>
+
+      <div v-if="errors.length">
+      <p>Please correct the following error(s):</p>
+        <ul>
+          <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+        </ul>
+      </div>
+      </div>
+
+      <input type="email" name="email" placeholder="Your email" v-model="emailValue">
+      <textarea name="message" placeholder="Your message" v-model="messageValue"></textarea>
+      <button type="submit">Send</button>
+      <input type="text" name="_gotcha" style="display:none" /> <!-- form spree anti-scraping measures -->
+    </form>
   </footer>
 </template>
 
@@ -12,22 +29,70 @@ export default {
     return {
       email: 'chi@thanbrothers.com',
       address: 'PO BOX 27529 Seattle, WA 98165',
-      phone: '(206) 527-5973'
+      phone: '(206) 527-5973',
+      emailValue: null,
+      messageValue: null,
+      errors: []
+    }
+  },
+  computed: {
+    getLink: function () {
+      return ('https://formspree.io/' + this.email)
+    }
+  },
+  methods: {
+    checkForm: function (e) {
+      if (this.emailValue && this.messageValue) { return true }
+      this.errors = []
+      if (!this.emailValue) { this.errors.push('Email required.') }
+      if (!this.messageValue) { this.errors.push('Message required.') }
+      e.preventDefault() // prevents default action of form on submission
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+
   #contact_section {
     bottom:0;
-    width:100%;
-    padding-bottom: 40px;
+    //padding-bottom: 40px;
     padding-top: 40px;
+  }
+  form {
+    display: inline-block;
+    color: black;
+  }
+  textarea {
+    margin: 0px;
+    resize: none;
+    height: 200px;
+  }
+  input, textarea {
+    width: 100%;
+    border-width: 1px;
+    padding: 10px;
+    border-style: solid;
+    border-color: #DDD;
+    margin-bottom: 10px;
+  }
+  input, textarea, button {
+    font-family: $default-font;
+    font-size: 1.25em;
+    color: black;
+  }
+  button {
+    width: 50%;
+    height: 40px;
+    margin-bottom: 30px;
   }
   p {
     margin: 0;
     white-space: pre;
     display: inline-block;
+  }
+  #other {
+    text-align: left;
+    padding-bottom: 10px;
   }
 </style>

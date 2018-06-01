@@ -14,6 +14,8 @@
     </div>
     <h2 id="desc">{{ desc }}</h2>
     <!-- <img src="@/assets/background.jpg"> -->
+
+    <div class="down-arrow"/>
   </div>
 </template>
 
@@ -41,11 +43,10 @@ export default {
 }
 @media screen and (min-width: 332px) {
   #title {
-    //font-size: 3em;
     @include responsive-font(6vw, 3em, 5em, 18px);
   }
   #desc {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 @media screen and (max-width: 584px) { // breakpoint at 469 or smaller
@@ -87,7 +88,7 @@ export default {
 
 #desc {
   font-weight: $thin-default;
-  font-style: italic;
+  text-transform: uppercase;
   color: white;
 }
 
@@ -99,7 +100,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   //background-size: ($bgwidth) ($bgheight);
-  //background-size: cover;
+  background-size: cover;
   width: 100%;
   max-width:100%; // gets rid of extra horizontal scrollbar
   color: #A0DCFF;
@@ -122,5 +123,10 @@ export default {
 
 a:hover {
   color: $red;
+}
+
+.down-arrow {
+  bottom: 30px;
+  position: absolute;
 }
 </style>

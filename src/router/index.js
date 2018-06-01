@@ -26,11 +26,11 @@ export default new Router({
       redirect: '/'
     },
     {
-      path: 'location_section',
+      path: '/location_section',
       redirect: '/'
     },
     {
-      path: 'contact_section',
+      path: '/contact_section',
       redirect: '/'
     },
     {
