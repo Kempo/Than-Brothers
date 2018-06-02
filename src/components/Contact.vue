@@ -2,12 +2,13 @@
   <footer id="contact_section">
     <hr class="line-separator"/>
     <h1> Contact </h1>
+    <!-- on submissin, initiate method checkForm to identify any form errors-->
     <form @submit="checkForm" method="POST" v-bind:action="getLink">
       <div id="other">
       <p>{{ address }} </p>
       <p>{{ phone }} </p>
 
-      <div v-if="errors.length">
+      <div v-if="errors.length"> <!-- if the array errors is filled with items-->
       <p>Please correct the following error(s):</p>
         <ul>
           <li v-for="error in errors" v-bind:key="error">{{ error }}</li>

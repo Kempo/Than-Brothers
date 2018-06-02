@@ -13,9 +13,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>' // crucial for rendering
-  /*
-  beforeCreate: function () {
-    console.log(this.$authorName) // for testing purposes
-  }
-  */
 })
