@@ -34,14 +34,12 @@ export default {
         {id: 7, title: 'Crossroads', address: '1299 156th Ave NE, Bellevue WA', phone: '(425) 818-4905'},
         {id: 8, title: 'Queen Anne', address: '8 W Mercer St, Seattle WA*', phone: '(206) 327-9699'},
         {id: 9, title: 'Wallingford', address: '2309 N 45th St, Seattle WA*', phone: '(206) 632-7378'},
-        {id: 10, title: 'Tacoma', address: '1712 Pacific Ave, Tacoma WA**', phone: '(253) 272-2249'},
-        {id: 11, title: 'Lynnwood', address: '16809 Highway 99, Lynnwood WA', phone: '(425) 999-6596'},
-        {id: 12, title: 'Fremont', address: '626 N 34th St, Seattle WA*', phone: '(206) 915-1928'}
+        {id: 10, title: 'Lynnwood', address: '16809 Highway 99, Lynnwood WA', phone: '(425) 999-6596'},
+        {id: 11, title: 'Fremont', address: '626 N 34th St, Seattle WA*', phone: '(206) 915-1928'}
       ],
       times: [
         { id: 1, time: 'DAILY 10 - 9' },
-        { id: 2, time: '(*) = 11 - 9' },
-        { id: 3, time: '(**) = 10 - 7 SAT 10 - 6 SUN CLOSED' }
+        { id: 2, time: '(*) = 11 - 9' }
       ]
     }
   }
