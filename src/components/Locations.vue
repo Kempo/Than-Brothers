@@ -30,12 +30,10 @@ export default {
         {id: 3, title: 'University of Washington', address: '4207 University Way, Seattle WA', phone: '(206) 632-7272'},
         {id: 4, title: 'Ballard', address: '2021 NW Market St, Seattle WA*', phone: '(206) 782-5715'},
         {id: 5, title: 'Junction', address: '4822 California Ave SW, Seattle WA*', phone: '(206) 937-6264'},
-        {id: 6, title: 'Everett', address: '500 SE Everett Mall Way, Everett WA', phone: '(425) 353-8906'},
-        {id: 7, title: 'Crossroads', address: '1299 156th Ave NE, Bellevue WA', phone: '(425) 818-4905'},
-        {id: 8, title: 'Queen Anne', address: '8 W Mercer St, Seattle WA*', phone: '(206) 327-9699'},
-        {id: 9, title: 'Wallingford', address: '2309 N 45th St, Seattle WA*', phone: '(206) 632-7378'},
-        {id: 10, title: 'Lynnwood', address: '16809 Highway 99, Lynnwood WA', phone: '(425) 999-6596'},
-        {id: 11, title: 'Fremont', address: '626 N 34th St, Seattle WA*', phone: '(206) 915-1928'}
+        {id: 6, title: 'Crossroads', address: '1299 156th Ave NE, Bellevue WA', phone: '(425) 818-4905'},
+        {id: 7, title: 'Wallingford', address: '2309 N 45th St, Seattle WA*', phone: '(206) 632-7378'},
+        {id: 8, title: 'Lynnwood', address: '16809 Highway 99, Lynnwood WA', phone: '(425) 999-6596'},
+        {id: 9, title: 'Fremont', address: '626 N 34th St, Seattle WA*', phone: '(206) 915-1928'}
       ],
       times: [
         { id: 1, time: 'DAILY 10 - 9' },

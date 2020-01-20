@@ -15,7 +15,6 @@
     <h2 id="desc">{{ desc }}</h2>
     <!-- <img src="@/assets/background.jpg"> -->
 
-    <div class="down-arrow"/>
   </div>
 </template>
 
@@ -123,10 +122,5 @@ export default {
 
 a:hover {
   color: $red;
-}
-
-.down-arrow {
-  bottom: 30px;
-  position: absolute;
 }
 </style>
