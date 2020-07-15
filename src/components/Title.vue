@@ -13,8 +13,6 @@
       <span id="t2"> {{ t2 }} </span>
     </div>
     <h2 id="desc">{{ desc }}</h2>
-    <!-- <img src="@/assets/background.jpg"> -->
-
   </div>
 </template>
 
@@ -101,7 +99,7 @@ export default {
   //background-size: ($bgwidth) ($bgheight);
   background-size: cover;
   width: 100%;
-  max-width:100%; // gets rid of extra horizontal scrollbar
+  max-width: 100%;
   color: #A0DCFF;
 }
 

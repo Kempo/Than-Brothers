@@ -31,10 +31,11 @@ $blue: #6d9eeb;
 
 .line-separator {
   width: 25vw;
-  height: 3px;
+  height: 1px;
   background-color: black;
   border-style: none;
 }
+
 @mixin center-align($percent: -100%) {
   margin: 0;
   position: relative;
@@ -64,13 +65,14 @@ $blue: #6d9eeb;
     width: 280px;
   }
 }
+
 @media screen and (min-width: 421px) {
   .individual-item {
     @include section-item(425px);
   }
   form {
-    width: 40vw;
-    max-width: 700px;
+    width: 60vw;
+    max-width: 500px;
   }
 }
 

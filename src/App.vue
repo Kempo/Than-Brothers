@@ -4,9 +4,27 @@
     <router-view name="MenuSection"/>
     <router-view name="LocationSection"/>
     <router-view name="ContactSection"/>
-    <router-view/> <!-- default router view; intended for the 404 error-->
+    <router-view /> <!-- default router view; intended for the 404 error-->
+    <Footer> </Footer>
   </div>
 </template>
+
+<script>
+import Footer from './components/Footer.vue'
+
+export default {
+  components: {
+    Footer
+  },
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Pho Than Brothers',
+    description: 'Since 1996, Pho Than Brothers has been offering delicious, invigorating, and affordable Vietnamese cuisine for the everyday individual.',
+    // all titles will be injected into this template
+    titleTemplate: 'Pho Than Brothers'
+  }
+}
+</script>
 
 <style lang="scss">
 #main {
