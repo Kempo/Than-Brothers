@@ -32,7 +32,7 @@ export default {
         {id: 4, title: 'Ballard', address: '2021 NW Market St', city: 'Seattle WA 98117*', phone: '(206) 782-5715'},
         {id: 5, title: 'Junction', address: '4822 California Ave SW', city: 'Seattle WA 98116*', phone: '(206) 937-6264'},
         {id: 6, title: 'Crossroads', address: '1299 156th Ave NE', city: 'Bellevue WA 98007', phone: '(425) 818-4905'},
-        {id: 7, title: 'Wallingford', address: '2309 N 45th St', city: 'Seattle WA 98105*', phone: '(206) 632-7378'},
+        {id: 7, title: 'Wallingford', address: '2309 N 45th St', city: 'Seattle WA 98103*', phone: '(206) 632-7378'},
         {id: 8, title: 'Lynnwood', address: '16809 Highway 99', city: 'Lynnwood WA 98037', phone: '(425) 999-6596'},
         {id: 9, title: 'Fremont', address: '626 N 34th St', city: 'Seattle WA 98103*', phone: '(206) 915-1928'}
       ],
