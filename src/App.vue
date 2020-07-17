@@ -17,10 +17,8 @@ export default {
     Footer
   },
   metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'Pho Than Brothers',
+    title: 'Pho Than Brothers – Delicious, homemade Pho',
     description: 'Since 1996, Pho Than Brothers has been offering delicious, invigorating, and affordable Vietnamese cuisine for the everyday individual.',
-    // all titles will be injected into this template
     titleTemplate: 'Pho Than Brothers'
   }
 }
