@@ -1,16 +1,30 @@
 <template>
   <div class="individual-item">
-  <h2> <a :href='getLink' target="_blank"> {{LocName}} </a> </h2>
+  <h2>
+    <a :href="getLink" v-on:click="emitGoogleMapsEvent(LocName)" target="_blank">
+      {{LocName}} <span v-if="TimeSchedule === 2">*</span>
+    </a>
+  </h2>
   <p> {{Address}} {{City}} </p>
   <p> {{Phone}} </p>
   </div>
 </template>
 <script>
 export default {
-  props: ['LocName', 'Address', 'Phone', 'City'],
+  props: ['LocName', 'TimeSchedule', 'Address', 'Phone', 'City'],
+  methods: {
+    emitGoogleMapsEvent: function (label) {
+      window.gtag('event', 'click', {
+        'event_category': 'GOOGLE_MAPS_CLICK',
+        'event_label': label
+      })
+
+      return true
+    }
+  },
   computed: {
     getLink: function () {
-      return ('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(this.Address))
+      return ('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(`${this.Address} ${this.City}`))
     }
   }
 }
@@ -30,6 +44,7 @@ a {
   color: $blue;
 }
 a:hover {
+  cursor: pointer;
   color: $red;
 }
 .individual-item {

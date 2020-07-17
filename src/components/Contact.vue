@@ -9,11 +9,11 @@
       <p>{{ phone }} </p>
 
       <div v-if="errors.length"> <!-- if the array errors is filled with items-->
-      <p>Please correct the following error(s):</p>
-        <ul>
-          <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-        </ul>
-      </div>
+        <p>Please correct the following error(s):</p>
+          <ul>
+            <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+          </ul>
+        </div>
       </div>
 
       <input type="email" name="email" placeholder="Your email" v-model="emailValue">
