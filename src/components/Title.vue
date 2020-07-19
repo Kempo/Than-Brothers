@@ -2,27 +2,39 @@
   <div id="start">
     <header id="top">
       <div id="nav">
-      <a class="nav-item" href="#menu_section"> menu </a>
-      <a class="nav-item" href="#location_section"> locations </a>
-      <a class="nav-item" href="#contact_section"> contact </a>
+        <a class="nav-item" v-on:click="emitGoogleMapsEvent('Menu')" href="#menu_section"> menu </a>
+        <a class="nav-item" v-on:click="emitGoogleMapsEvent('Location')" href="#location_section"> locations </a>
+        <a class="nav-item" v-on:click="emitGoogleMapsEvent('Contact')" href="#contact_section"> contact </a>
       </div>
     </header>
-
-    <div id="title">
-      <span id="t1"> {{ t1 }} </span>
-      <span id="t2"> {{ t2 }} </span>
+    <div class="body">
+      <div class="text">
+        <div id="title">
+          <h1> {{ t1 }} {{ t2 }}</h1>
+        </div>
+        <h2 id="desc">{{ desc }}</h2>
+      </div>
     </div>
-    <h2 id="desc">{{ desc }}</h2>
   </div>
 </template>
 
 <script>
 export default {
+  methods: {
+    emitGoogleMapsEvent: function (label) {
+      window.gtag('event', 'click', {
+        'event_category': 'NAVIGATION_BAR',
+        'event_label': label
+      })
+
+      return true
+    }
+  },
   data () {
     return {
       t1: 'Pho',
       t2: 'Than Brothers',
-      desc: 'An invigorating and satisfying experience.'
+      desc: 'Delicious, affordable, and authentic Vietnamese cuisine.'
     }
   }
 }
@@ -30,63 +42,64 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@media screen and (max-width: 331px) {
-  #title {
-    font-size: 2em;
-  }
-  #desc {
+@media screen and (max-width: 449px) {
+  .body .text #title {
     font-size: 1em;
   }
-}
-@media screen and (min-width: 332px) {
-  #title {
-    @include responsive-font(6vw, 3em, 5em, 18px);
-  }
-  #desc {
-    font-size: 1.5em;
+  .body .text #desc {
+    font-size: .8em;
   }
 }
-@media screen and (max-width: 584px) { // breakpoint at 469 or smaller
+@media screen and (min-width: 450px) {
+  .body .text #title {
+    font-size: 2em;
+  }
+  .body .text #desc {
+    font-size: 1.25em;
+  }
+}
+@media screen and (max-width: 584px) {
   #nav {
-    @include responsive-font(2vw, 1.2em, 1.99em, 18px);
+    @include responsive-font(2vw, 1.1em, 1.99em, 18px);
   }
   #top {
     text-align: center;
   }
-  #desc {
-    @include center-align(-120%);
-  }
 }
 
-@media screen and (min-width: 585px) { // breakpoint at 470 or higher
+@media screen and (min-width: 585px) {
   #nav {
     @include responsive-font(3vw, 2em, 4em, 18px);
   }
   #top {
     text-align: left;
   }
-  #desc {
-    @include center-align(-150%);
+}
+.body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .text {
+    margin-bottom: 125px;
+
+    #title {
+      margin: 0px;
+      display: flex;
+      flex-direction: row;
+      font-weight: $bold-default;
+      text-transform: uppercase;
+    }
+
+    #desc {
+      margin: 0px;
+      font-weight: $thin-default;
+      text-transform: uppercase;
+      color: white;
+    }
   }
-}
-
-#title {
-  font-weight: $bold-default;
-  text-transform: uppercase;
-  @include center-align(-130%);
-}
-
-#t1 {
-  //color: $blue; // blue
-}
-#t2 {
-  //color: $red; // red
-}
-
-#desc {
-  font-weight: $thin-default;
-  text-transform: uppercase;
-  color: white;
 }
 
 #start {

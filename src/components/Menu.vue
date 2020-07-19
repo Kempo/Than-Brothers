@@ -4,11 +4,11 @@
     <h1> <span class="section-title-bar"/> menu </h1>
     <h2> Pho Bo <span class="title-desc"> rice noodle soup with beef </span></h2>
     <MenuItem
-    v-for="item in beef"
-    v-bind:key="item.num"
-    v-bind:item-num="item.num"
-    v-bind:item-title="item.title"
-    v-bind:item-desc="item.desc"
+      v-for="item in beef"
+      v-bind:key="item.num"
+      v-bind:item-num="item.num"
+      v-bind:item-title="item.title"
+      v-bind:item-desc="item.desc"
     />
 
     <h2> Other <span class="title-desc"> rice noodle soup variations  </span> </h2>

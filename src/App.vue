@@ -17,7 +17,7 @@ export default {
     Footer
   },
   metaInfo: {
-    title: 'Pho Than Brothers – Delicious, homemade Pho',
+    title: 'Pho Than Brothers - Delicious, affordable and authentic Vietnamese cuisine',
     description: 'Since 1996, Pho Than Brothers has been offering delicious, invigorating, and affordable Vietnamese cuisine for the everyday individual.',
     titleTemplate: 'Pho Than Brothers'
   }

@@ -5,8 +5,8 @@
     <!-- on submissin, initiate method checkForm to identify any form errors-->
     <form @submit="checkForm" method="POST" v-bind:action="getLink">
       <div id="other">
-      <p>{{ address }} </p>
-      <p>{{ phone }} </p>
+        <p>{{ address }} </p>
+        <p>{{ phone }} </p>
 
       <div v-if="errors.length"> <!-- if the array errors is filled with items-->
         <p>Please correct the following error(s):</p>
@@ -18,7 +18,7 @@
 
       <input type="email" name="email" placeholder="Your email" v-model="emailValue">
       <textarea name="message" placeholder="Your message" v-model="messageValue"></textarea>
-      <button type="submit">Send</button>
+      <button id="send-button" v-on:click="emitGoogleMapsEvent('Send Email')" type="submit">Send</button>
       <input type="text" name="_gotcha" style="display:none" /> <!-- form spree anti-scraping measures -->
     </form>
   </footer>
@@ -48,6 +48,14 @@ export default {
       if (!this.emailValue) { this.errors.push('Email required.') }
       if (!this.messageValue) { this.errors.push('Message required.') }
       e.preventDefault() // prevents default action of form on submission
+    },
+    emitGoogleMapsEvent: function (label) {
+      window.gtag('event', 'click', {
+        'event_category': 'CONTACT_SUBMISSION',
+        'event_label': label
+      })
+
+      return true
     }
   }
 }
@@ -72,7 +80,7 @@ export default {
   input, textarea {
     width: 100%;
     border-width: 1px;
-    padding: 10px;
+    padding: 10px 0px 10px 5px;
     border-style: solid;
     border-color: #DDD;
     margin-bottom: 10px;
@@ -95,5 +103,10 @@ export default {
   #other {
     text-align: left;
     padding-bottom: 10px;
+  }
+  #send-button {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #CCC;
   }
 </style>
