@@ -1,7 +1,19 @@
 <template>
 <div id="menu_section">
   <div class="section">
-    <h1> <span class="section-title-bar"/> menu </h1>
+    <h1 class="menu-title"> <span class="section-title-bar"/> menu </h1>
+    <div class="menu-desc">
+      <p class="bowl-sizes-regular"><span class="header">BOWL SIZES:</span> SMALL | MEDIUM | LARGE | X-LARGE</p>
+      <ul class="bowl-sizes-mobile">
+        <li class="header">BOWL SIZES:</li>
+        <li>SMALL</li>
+        <li>MEDIUM</li>
+        <li>LARGE</li>
+        <li>X-LARGE</li>
+      </ul>
+      <p class="additional">Every dish comes with basil, lime, and beansprouts as optional garnishes.</p>
+    </div>
+    <hr class="line-separator" />
     <h2> Pho Bo <span class="title-desc"> rice noodle soup with beef </span></h2>
     <MenuItem
       v-for="item in beef"
@@ -52,5 +64,57 @@ export default {
 <style lang="scss" scoped>
   h1 {
     @include section-title-size;
+  }
+  .menu-title {
+    margin-bottom: 0px;
+  }
+
+  .bowl-sizes-regular {
+    letter-spacing: 2px;
+  }
+
+  .bowl-sizes-mobile {
+    letter-spacing: 2px;
+  }
+
+  .menu-desc {
+    margin-top: 20px;
+
+    .header {
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 0px;
+    }
+
+    p {
+      margin: 0px;
+    }
+    margin-bottom: 60px;
+
+    .additional {
+      color: #777;
+      padding-top: 10px;
+    }
+    @media screen and (max-width: 421px) {
+      .bowl-sizes-regular {
+        display: none;
+      }
+
+      .bowl-sizes-mobile {
+        display: inline-block;
+      }
+    }
+
+    @media screen and (min-width: 421px) {
+      .bowl-sizes-regular {
+        display: inline-block;
+      }
+
+      .bowl-sizes-mobile {
+        display: none;
+      }
+    }
   }
 </style>

@@ -50,11 +50,4 @@ export default {
 h1 {
   @include section-title-size;
 }
-li {
-  font-size: 1em;
-  letter-spacing: 2px;
-}
-ul {
-  list-style-type: none;
-}
 </style>

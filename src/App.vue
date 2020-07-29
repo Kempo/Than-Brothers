@@ -18,7 +18,7 @@ export default {
   },
   metaInfo: {
     title: 'Pho Than Brothers - Delicious, affordable and authentic Vietnamese cuisine',
-    description: 'Since 1996, Pho Than Brothers has been offering delicious, invigorating, and affordable Vietnamese cuisine for the everyday individual.',
+    description: 'Since 1996, Pho Than Brothers has been offering delicious, invigorating, and affordable Vietnamese cuisine for the everyday individual. Pho Than Brothers is a multi-generational family-run establishment that serve the best Pho in the Pacific Northwest.',
     titleTemplate: 'Pho Than Brothers'
   }
 }
