@@ -13,7 +13,17 @@
   to = "/"
   status = 301
 
-  [[redirects]]
-  from = "/index-html"
-  to = "/"
-  status = 301
+[[redirects]]
+from = "/index-html"
+to = "/"
+status = 301
+
+[[redirects]]
+from = "/menu/menu.htm"
+to = "/"
+status = 301
+
+[[redirects]]
+from = "/about-us.html"
+to = "/"
+status = 301
