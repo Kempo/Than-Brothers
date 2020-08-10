@@ -1,11 +1,70 @@
-$default-font: 'Source Sans Pro', sans-serif;
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+  font-style: normal;
+  src: url("~@/assets/fonts/SourceSansPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-style: italic;
+  src: url("~@/assets/fonts/SourceSansPro-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-style: normal;
+  src: url("~@/assets/fonts/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  font-style: normal;
+  src: url("~@/assets/fonts/SourceSansPro-Light.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  font-style: italic;
+  src: url("~@/assets/fonts/SourceSansPro-LightItalic.ttf");
+}
+
+$default-font: "Source Sans Pro", sans-serif;
 $thin-default: 300;
 $bold-default: 700;
 $bgwidth: 800px;
 $bgheight: 531px;
 
+$banner-color: rgba(109, 158, 235, 1);
+
 $red: #dd7e6b;
 $blue: #6d9eeb;
+
+h1 {
+  font-size: 3.75em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+
+a {
+  transition: color 100ms;
+}
+
+button:hover {
+  cursor: pointer;
+}
 
 .section-title-bar {
     width: 10px;
@@ -15,18 +74,9 @@ $blue: #6d9eeb;
     vertical-align: middle;
 }
 .title-desc {
-  font-size: .8em;
+  font-size: .85em;
   font-weight: $thin-default;
   white-space: nowrap;
-}
-
-.down-arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 10px;
-    transform: rotate(45deg);
-   -webkit-transform: rotate(45deg);
 }
 
 .line-separator {
@@ -93,43 +143,4 @@ ul {
   .section {
       @include section-div-style(40px);
   }
-}
-///
-/// Viewport sized typography with minimum and maximum values
-///
-/// @author Eduardo Boucas (@eduardoboucas)
-///
-/// @param {Number}   $responsive  - Viewport-based size
-/// @param {Number}   $min         - Minimum font size (px)
-/// @param {Number}   $max         - Maximum font size (px)
-///                                  (optional)
-/// @param {Number}   $fallback    - Fallback for viewport-
-///                                  based units (optional)
-///
-/// @example scss - 5vw font size (with 50px fallback),
-///                 minumum of 35px and maximum of 150px
-///  @include responsive-font(5vw, 35px, 150px, 50px);
-///
-@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
-  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
-  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
-  $min-breakpoint: $min / $responsive-unitless * 100;
-
-  @media (max-#{$dimension}: #{$min-breakpoint}) {
-    font-size: $min;
-  }
-
-  @if $max {
-    $max-breakpoint: $max / $responsive-unitless * 100;
-
-    @media (min-#{$dimension}: #{$max-breakpoint}) {
-      font-size: $max;
-    }
-  }
-
-  @if $fallback {
-    font-size: $fallback;
-  }
-
-  font-size: $responsive;
 }

@@ -32,6 +32,9 @@ export default {
   height: 100%;
   width: 100%;
   font-family: $default-font;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: $thin-default;
   overflow-x: hidden;
 }

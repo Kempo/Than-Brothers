@@ -62,11 +62,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  h1 {
+    @include section-title-size;
+  }
   #contact_section {
     bottom:0;
-    //padding-bottom: 40px;
-    padding-top: 40px;
+    padding: 40px 0px;
+    font-weight: 300;
   }
   form {
     display: inline-block;
@@ -89,11 +91,7 @@ export default {
     font-family: $default-font;
     font-size: 1.25em;
     color: black;
-  }
-  button {
-    width: 50%;
-    height: 40px;
-    margin-bottom: 30px;
+    font-weight: inherit;
   }
   p {
     margin: 0;
@@ -107,6 +105,18 @@ export default {
   #send-button {
     border-style: solid;
     border-width: 1px;
-    border-color: #CCC;
+    border-color: $red;
+    background-color: white;
+    color: $red;
+    padding: 0px 40px;
+    height: 40px;
+    margin-bottom: 30px;
+    transition: background-color 100ms, color 100ms;
+    border-radius: 50px;
+
+    &:hover {
+      color: white;
+      background-color: $red;
+    }
   }
 </style>

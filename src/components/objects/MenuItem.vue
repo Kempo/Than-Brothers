@@ -1,7 +1,7 @@
 <template>
   <div class="individual-item">
-  <h2> {{itemNum}}. {{itemTitle}} </h2>
-  <p> {{itemDesc}} </p>
+    <h2> {{itemNum}}. {{itemTitle}} </h2>
+    <p> {{itemDesc}} </p>
   </div>
 </template>
 
@@ -12,9 +12,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=Lato:300');
-p {
-  font-size: 1.25em;
-  font-family: 'Lato', sans-serif;
-}
+  @import url('https://fonts.googleapis.com/css?family=Lato:300');
+  .individual-item {
+    h2 {
+      font-weight: 700;
+    }
+    p {
+      font-family: 'Lato', sans-serif;
+    }
+  }
+  @media screen and (max-width: 749px) {
+    .individual-item {
+      h2 {
+        font-size: 1.25em;
+      }
+      p {
+        font-size: 1.1em;
+      }
+    }
+  }
+  @media screen and (min-width: 750px) {
+    .individual-item {
+      h2 {
+        font-size: 1.5em;
+      }
+      p {
+        font-size: 1.25em;
+      }
+    }
+  }
 </style>
