@@ -4,9 +4,9 @@
       <h2 class="title"><span class="first">PHO</span> <span class="second">THAN BROTHERS</span></h2>
       <div class="nav">
         <ul>
-          <a v-on:click="emitGoogleMapsEvent('Menu')" href="#menu_section"><li>Menu</li></a>
-          <a v-on:click="emitGoogleMapsEvent('Location')" href="#location_section"><li>Locations</li></a>
-          <a v-on:click="emitGoogleMapsEvent('Contact')" href="#contact_section"><li>Contact</li></a>
+          <li><a v-on:click="emitGoogleMapsEvent('Menu')" href="#menu_section">Menu</a></li>
+          <li><a v-on:click="emitGoogleMapsEvent('Location')" href="#location_section">Locations</a></li>
+          <li><a v-on:click="emitGoogleMapsEvent('Contact')" href="#contact_section">Contact</a></li>
         </ul>
       </div>
     </div>
