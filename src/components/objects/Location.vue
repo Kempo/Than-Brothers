@@ -1,7 +1,7 @@
 <template>
   <div class="individual-item">
   <h2>
-    <a :href="getLink" v-on:click="emitGoogleMapsEvent(LocName)" target="_blank">
+    <a :href="getLink" v-on:click="emitGoogleMapsEvent(LocName)" target="_blank" rel="noopener noreferrer">
       {{LocName}} <span v-if="TimeSchedule === 2">*</span>
     </a>
   </h2>
