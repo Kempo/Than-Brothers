@@ -60,6 +60,11 @@ $banner-color: rgba(109, 158, 235, 1);
 $red: #dd7e6b;
 $blue: #6d9eeb;
 
+.layout {
+  width: 100%;
+  max-width: 1150px;
+}
+
 h1 {
   font-size: 3.75em;
 }
@@ -127,13 +132,12 @@ ul {
 
 @mixin section-item($w) {
   display: inline-block;
-  padding: 20px;
   width: $w; // make it width: 300 or something when it's not mobile.
 }
 
 @media screen and (max-width: 420px) {
   .individual-item {
-    @include section-item(auto);
+    @include section-item(100%);
   }
   form {
     width: 280px;
@@ -142,7 +146,7 @@ ul {
 
 @media screen and (min-width: 421px) {
   .individual-item {
-    @include section-item(425px);
+    @include section-item(410px);
   }
   form {
     width: 60vw;
@@ -150,13 +154,21 @@ ul {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 499px) {
+  .layout {
+    margin: 0px 20px;
+  }
+
   .section {
-      @include section-div-style(20px);
+    text-align: center;
   }
 }
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 50px) {
   .section {
-      @include section-div-style(40px);
+    text-align: left;
+  }
+
+  .layout {
+    margin: 0px 40px;
   }
 }
