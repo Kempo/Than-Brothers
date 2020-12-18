@@ -10,6 +10,7 @@
           <span>POSTMATES ONLY</span>
         </p>
       </div>
+      <img class="half-circle" src="../assets/half-circle.svg" alt="Red Half Circle" />
       <div class="layout">
         <div class="header">
           <h2 class="title">
@@ -29,7 +30,7 @@
             </div>
             <div class="about">
               <h3>Serving the Greater Seattle region since 1996.</h3>
-              <p><strong>Pho</strong> is a Vietnamese rice noodle soup that invigorates and warms the soul.</p>
+              <p><strong>Pho</strong> is a Vietnamese rice noodle soup that invigorates and warms the soul. <br /> <br /> Try our homemade broth along with our selection of delicious beef cuts or vegetarian combinations.</p>
               <a v-on:click="emitGoogleMapsEvent('Menu')" href="#menu_section"><button>See Menu</button></a>
             </div>
           </div>
@@ -74,9 +75,28 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
-// small x < 400
-// medium 400 < x < 769
-// large x >= 770
+.half-circle {
+  z-index: -1;
+  position: absolute;
+  left: 0px;
+}
+
+@media screen and (max-width: 499px) {
+  .half-circle {
+    top: 75%;
+    transform: scale(6, 5);
+  }
+}
+
+// 24 x 20
+// 12 x 10
+
+@media screen and (min-width: 500px) {
+  .half-circle {
+    bottom: 25%;
+    transform: scale(12, 10);
+  }
+}
 
 // DEFAULT STYLES
 .container {
@@ -89,7 +109,6 @@ export default {
   }
 
   .layout {
-    margin: 0 20px;
     .header {
       margin: 0 20px;
 
@@ -194,8 +213,6 @@ export default {
     }
 
     .layout {
-      width: 100%;
-      max-width: 1150px;
       align-self: center;
 
       .header {

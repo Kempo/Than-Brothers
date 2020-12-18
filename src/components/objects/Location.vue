@@ -51,6 +51,7 @@ a:hover {
   font-size: 1em;
   width: auto;
   padding-right: 20px;
+  margin: 20px 0px;
 }
 
 </style>

@@ -1,19 +1,21 @@
 <template>
   <div id="location_section">
-    <div class="section">
-      <h1> locations </h1>
-      <ul>
-        <li v-for="t in times" v-bind:key="t.id"> {{ t.time }}</li>
-      </ul>
-      <Location
-      v-for="loc in list"
-      v-bind:key="loc.id"
-      v-bind:loc-name="loc.title"
-      v-bind:Address="loc.address"
-      v-bind:Phone="loc.phone"
-      v-bind:City="loc.city"
-      v-bind:TimeSchedule="loc.timeSchedule"
-      />
+    <div class="layout">
+      <div class="section">
+        <h1> Locations </h1>
+        <ul class="times">
+          <li v-for="t in times" v-bind:key="t.id"> {{ t.time }}</li>
+        </ul>
+        <Location
+        v-for="loc in list"
+        v-bind:key="loc.id"
+        v-bind:loc-name="loc.title"
+        v-bind:Address="loc.address"
+        v-bind:Phone="loc.phone"
+        v-bind:City="loc.city"
+        v-bind:TimeSchedule="loc.timeSchedule"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +49,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  #location_section {
+    display: flex;
+    justify-content: center;
+
+    .layout {
+      .times {
+        margin: 0px;
+        padding: 0px;
+      }
+    }
+  }
+
 h1 {
   @include section-title-size;
 }

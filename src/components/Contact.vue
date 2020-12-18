@@ -5,11 +5,10 @@
     <!-- on submissin, initiate method checkForm to identify any form errors-->
     <form @submit="checkForm" method="POST" v-bind:action="getLink">
       <div id="other">
-        <p>{{ address }} </p>
-        <p>{{ phone }} </p>
+        <p class="desc">We would love your feedback.</p>
 
-      <div v-if="errors.length"> <!-- if the array errors is filled with items-->
-        <p>Please correct the following error(s):</p>
+        <div v-if="errors.length"> <!-- if the array errors is filled with items-->
+          <p>Please correct the following error(s):</p>
           <ul>
             <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
           </ul>
@@ -21,6 +20,8 @@
       <button id="send-button" v-on:click="emitGoogleMapsEvent('Send Email')" type="submit">Send</button>
       <input type="text" name="_gotcha" style="display:none" /> <!-- form spree anti-scraping measures -->
     </form>
+    <p>{{ address }} </p>
+    <p>{{ phone }} </p>
   </footer>
 </template>
 
@@ -93,14 +94,13 @@ export default {
     color: black;
     font-weight: inherit;
   }
-  p {
-    margin: 0;
-    white-space: pre;
-    display: inline-block;
-  }
   #other {
     text-align: left;
     padding-bottom: 10px;
+
+    .desc {
+      color: black
+    }
   }
   #send-button {
     border-style: solid;
@@ -118,5 +118,9 @@ export default {
       color: white;
       background-color: $red;
     }
+  }
+
+  p {
+    color: #CCC;
   }
 </style>

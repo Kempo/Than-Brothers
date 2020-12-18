@@ -13,6 +13,11 @@ export default {
 
 <style lang="scss" scoped>
   @import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+  h2 {
+    margin: 5px 0px;
+  }
+
   .individual-item {
     h2 {
       font-weight: 700;
@@ -27,17 +32,17 @@ export default {
         font-size: 1.25em;
       }
       p {
-        font-size: 1.1em;
+        font-size: 1em;
       }
     }
   }
   @media screen and (min-width: 750px) {
     .individual-item {
       h2 {
-        font-size: 1.5em;
+        font-size: 1.25em;
       }
       p {
-        font-size: 1.25em;
+        font-size: 1em;
       }
     }
   }
