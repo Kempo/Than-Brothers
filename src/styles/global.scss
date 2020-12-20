@@ -73,6 +73,7 @@ $blue: #6d9eeb;
 
 h1 {
   font-size: 3.75em;
+  margin-top: 0px;
 }
 
 h2 {
@@ -164,12 +165,12 @@ ul {
     margin: 0px 20px;
   }
 
-  .section {
+  section {
     text-align: center;
   }
 }
-@media screen and (min-width: 50px) {
-  .section {
+@media screen and (min-width: 500px) {
+  section {
     text-align: left;
   }
 

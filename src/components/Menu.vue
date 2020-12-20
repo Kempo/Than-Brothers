@@ -1,7 +1,7 @@
 <template>
-<div id="menu_section">
+<div id="menu">
   <div class="layout">
-  <div class="section">
+  <section>
     <h1 class="menu-title"> <span class="section-title-bar"/> Menu </h1>
     <div class="menu-desc">
       <p class="bowl-sizes-regular"><span class="header">BOWL SIZES:</span> SMALL | MEDIUM | LARGE | X-LARGE</p>
@@ -28,7 +28,7 @@
     <MenuItem item-title='Pho Ga' item-num='A' item-desc='tender shredded chicken'/>
     <MenuItem item-title='Pho Bo Vien' item-num='B' item-desc='savory beef meat balls'/>
     <MenuItem item-title='Pho Chay (vegetarian)' item-num='V' item-desc='vegetable medley of tofu, mushroom, carrots, and broccoli'/>
-  </div>
+  </section>
   <hr class="line-separator">
    </div>
 </div>
@@ -65,9 +65,10 @@ export default {
 
 <style lang="scss" scoped>
 
-  #menu_section {
+  #menu {
     display: flex;
     justify-content: center;
+    padding-top: 80px;
   }
 
   .title-header {

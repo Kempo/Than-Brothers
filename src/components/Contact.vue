@@ -1,5 +1,5 @@
 <template>
-  <footer id="contact_section">
+  <footer id="contact">
     <hr class="line-separator"/>
     <h1> Contact </h1>
     <form @submit="checkForm" method="POST" v-bind:action="getLink">
@@ -74,9 +74,9 @@ export default {
     display: flex;
     justify-content: center;
   }
-  #contact_section {
+  #contact {
     bottom:0;
-    padding: 40px 0px;
+    padding: 70px 0px;
     font-weight: 300;
 
     display: flex;

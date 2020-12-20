@@ -1,7 +1,7 @@
 <template>
-  <div id="location_section">
+  <div id="location">
     <div class="layout">
-      <div class="section">
+      <section>
         <h1> Locations </h1>
         <ul class="times">
           <li v-for="t in times" v-bind:key="t.id"> {{ t.time }}</li>
@@ -15,7 +15,7 @@
         v-bind:City="loc.city"
         v-bind:TimeSchedule="loc.timeSchedule"
         />
-      </div>
+      </section>
     </div>
   </div>
 </template>
@@ -50,9 +50,10 @@ export default {
 
 <style lang="scss" scoped>
 
-  #location_section {
+  #location{
     display: flex;
     justify-content: center;
+    padding-top: 80px;
 
     .layout {
       .times {
