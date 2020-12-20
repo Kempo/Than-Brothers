@@ -17,9 +17,9 @@
             <a href="/"><span class="first">PHO</span> <span class="second">THAN BROTHERS</span></a>
           </h2>
           <h2 class="nav">
-            <a class="link" v-on:click="emitGoogleMapsEvent('Menu')" href="#menu_section"> menu </a>
-            <a class="link" v-on:click="emitGoogleMapsEvent('Location')" href="#location_section"> locations </a>
-            <a class="link" v-on:click="emitGoogleMapsEvent('Contact')" href="#contact_section"> contact </a>
+            <a class="link" v-on:click="emitGoogleMapsEvent('Menu')" href="#menu"> menu </a>
+            <a class="link" v-on:click="emitGoogleMapsEvent('Location')" href="#location"> locations </a>
+            <a class="link" v-on:click="emitGoogleMapsEvent('Contact')" href="#contact"> contact </a>
           </h2>
           <span class="mobile-divider" />
         </div>

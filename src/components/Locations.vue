@@ -1,5 +1,5 @@
 <template>
-  <div id="location_section">
+  <div id="location">
     <div class="layout">
       <div class="section">
         <h1> Locations </h1>
@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 
-  #location_section {
+  #location{
     display: flex;
     justify-content: center;
 

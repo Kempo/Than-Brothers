@@ -1,5 +1,5 @@
 <template>
-<div id="menu_section">
+<div id="menu">
   <div class="layout">
   <div class="section">
     <h1 class="menu-title"> <span class="section-title-bar"/> Menu </h1>
@@ -65,7 +65,7 @@ export default {
 
 <style lang="scss" scoped>
 
-  #menu_section {
+  #menu {
     display: flex;
     justify-content: center;
   }

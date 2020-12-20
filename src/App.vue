@@ -1,19 +1,32 @@
 <template>
   <div id="main">
-    <router-view name="TitleSection"/>
+    <!-- <router-view name="TitleSection"/>
     <router-view name="MenuSection"/>
     <router-view name="LocationSection"/>
     <router-view name="ContactSection"/>
-    <router-view /> <!-- default router view; intended for the 404 error-->
+
+    <router-view /> default router view; intended for the 404 error-->
+    <Title />
+    <Menu />
+    <Locations />
+    <Contact />
     <Footer> </Footer>
   </div>
 </template>
 
 <script>
 import Footer from './components/Footer.vue'
+import Menu from './components/Menu'
+import Locations from './components/Locations'
+import Contact from './components/Contact'
+import Title from './components/Title'
 
 export default {
   components: {
+    Title,
+    Menu,
+    Locations,
+    Contact,
     Footer
   },
   metaInfo: {
