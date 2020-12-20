@@ -1,20 +1,9 @@
 <template>
   <div id="error">
     <h1> 404 - NOT FOUND.</h1>
-    <h1> <a v-bind:href='home'> HOME </a> </h1>
+    <h1> <a href="/"> HOME </a> </h1>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'Error-page',
-  data () {
-    return {
-      home: '/' // link to return back to first website
-    }
-  }
-}
-</script>
 
 <style lang="scss" scoped>
   h1 {

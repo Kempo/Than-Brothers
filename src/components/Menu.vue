@@ -25,7 +25,7 @@
     />
 
     <h2 class="title-header"> Other <span class="title-desc"> rice noodle soup variations  </span> </h2>
-    <MenuItem item-title='Pho Ga' item-num='A' item-desc='seasoned shredded chicken'/>
+    <MenuItem item-title='Pho Ga' item-num='A' item-desc='tender shredded chicken'/>
     <MenuItem item-title='Pho Bo Vien' item-num='B' item-desc='savory beef meat balls'/>
     <MenuItem item-title='Pho Chay (vegetarian)' item-num='V' item-desc='vegetable medley of tofu, mushroom, carrots, and broccoli'/>
   </div>
