@@ -76,7 +76,7 @@ export default {
   }
   #contact {
     bottom:0;
-    padding: 40px 0px;
+    padding: 70px 0px;
     font-weight: 300;
 
     display: flex;

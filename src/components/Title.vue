@@ -172,7 +172,7 @@ export default {
       }
 
       .media {
-        margin: 75px 0px;
+        margin: 35px 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
