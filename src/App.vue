@@ -18,7 +18,7 @@ export default {
   },
   metaInfo: {
     title: 'The Best Pho in Seattle - Pho Than Brothers',
-    description: 'Pho Than Brothers is a family-run establishment that serves the best Pho in the Pacific Northwest since 1996. We offer a variety of homemade Pho Bo, along with delicious Pho Chay and Pho Ga.',
+    description: 'Pho Than Brothers is a family-run establishment that serves the best Pho in Seattle. We offer a variety of homemade Pho Bo, along with delicious Pho Chay and Pho Ga.',
     titleTemplate: 'The Best Pho in Seattle - Pho Than Brothers'
   }
 }

@@ -2,12 +2,11 @@
   <footer id="contact_section">
     <hr class="line-separator"/>
     <h1> Contact </h1>
-    <!-- on submissin, initiate method checkForm to identify any form errors-->
     <form @submit="checkForm" method="POST" v-bind:action="getLink">
       <div id="other">
-        <p class="desc">We would love your feedback.</p>
+        <p class="desc">At <span style="color: #6d9eeb;">Pho</span> <span style="color: #dd7e6b;">Than Brothers</span>, we strive for the best quality food and experience and we'd love your feedback.</p>
 
-        <div v-if="errors.length"> <!-- if the array errors is filled with items-->
+        <div v-if="errors.length">
           <p>Please correct the following error(s):</p>
           <ul>
             <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
@@ -15,9 +14,13 @@
         </div>
       </div>
 
-      <input type="email" name="email" placeholder="Your email" v-model="emailValue">
-      <textarea name="message" placeholder="Your message" v-model="messageValue"></textarea>
-      <button id="send-button" v-on:click="emitGoogleMapsEvent('Send Email')" type="submit">Send</button>
+      <label for="email">Email<span style="color: red;">*</span></label>
+      <input id="email" type="email" name="email" v-model="emailValue">
+      <label for="message">Message<span style="color: red;">*</span></label>
+      <textarea id="message" name="message" v-model="messageValue"></textarea>
+      <div class="submit-row">
+        <button id="send-button" v-on:click="emitGoogleMapsEvent('Send Email')" type="submit">Send</button>
+      </div>
       <input type="text" name="_gotcha" style="display:none" /> <!-- form spree anti-scraping measures -->
     </form>
     <p>{{ address }} </p>
@@ -65,15 +68,24 @@ export default {
 <style lang="scss" scoped>
   h1 {
     @include section-title-size;
+    margin-bottom: 0px;
+  }
+  .submit-row {
+    display: flex;
+    justify-content: center;
   }
   #contact_section {
     bottom:0;
     padding: 40px 0px;
     font-weight: 300;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   form {
-    display: inline-block;
     color: black;
+    text-align: left;
   }
   textarea {
     margin: 0px;
@@ -83,14 +95,15 @@ export default {
   input, textarea {
     width: 100%;
     border-width: 1px;
-    padding: 10px 0px 10px 5px;
+    padding: 7px 0px 7px 5px;
     border-style: solid;
     border-color: #DDD;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
   input, textarea, button {
     font-family: $default-font;
-    font-size: 1.25em;
+    font-size: 1em;
     color: black;
     font-weight: inherit;
   }
@@ -121,6 +134,6 @@ export default {
   }
 
   p {
-    color: #CCC;
+    color: rgb(136, 136, 136);
   }
 </style>

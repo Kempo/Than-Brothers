@@ -33,7 +33,7 @@ export default {
 <style lang="scss" scoped>
 p {
   font-style: italic;
-  color: grey;
+  color: rgb(101, 100, 100);
   margin: 5px;
 }
 h2 {

@@ -29,7 +29,7 @@
               <h1>Delicious,<br>Authentic,<br>And Affordable.</h1>
             </div>
             <div class="about">
-              <h3>Serving the Greater Seattle region since 1996.</h3>
+              <h2>Serving the Greater Seattle region since 1996.</h2>
               <p><strong>Pho</strong> is a Vietnamese rice noodle soup that invigorates and warms the soul. <br /> <br /> Try our homemade broth along with our selection of delicious beef cuts or vegetarian combinations.</p>
               <a v-on:click="emitGoogleMapsEvent('Menu')" href="#menu_section"><button>See Menu</button></a>
             </div>
@@ -60,13 +60,6 @@ export default {
       })
 
       return true
-    }
-  },
-  data () {
-    return {
-      t1: 'Pho',
-      t2: 'Than Brothers',
-      desc: 'Delicious, affordable, and authentic Vietnamese cuisine.'
     }
   }
 }
@@ -105,12 +98,15 @@ export default {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     color: white;
     letter-spacing: 1px;
-    padding: 5px 10px;
+    padding: 5px 0px;
+
+    top: 0px;
+    position: fixed;
+    width: 100%;
   }
 
   .layout {
     .header {
-      margin: 0 20px;
 
       .title {
         text-transform: uppercase;
@@ -142,6 +138,11 @@ export default {
 
         .about {
           width: 400px;
+
+          h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+          }
 
           button {
             display: inline-block;
@@ -192,6 +193,7 @@ export default {
             color: black;
           }
           img {
+            width: auto;
             height: 45px;
             margin: 15px 15px;
           }
@@ -216,6 +218,8 @@ export default {
       align-self: center;
 
       .header {
+        margin: 75px 20px 0px 20px;
+
         display: flex;
         flex-direction: row;
         flex-grow: 1;
@@ -265,6 +269,8 @@ export default {
       margin: 0px;
 
       .header {
+        margin: 125px 20px 0px 20px;
+
         display: flex;
         flex-direction: column;
         align-items: center;
