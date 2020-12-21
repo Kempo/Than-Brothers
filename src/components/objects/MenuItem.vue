@@ -12,7 +12,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
+  // FIX!!
+  // @import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
 
   h2 {
     margin: 5px 0px;
