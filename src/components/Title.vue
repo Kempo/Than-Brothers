@@ -31,7 +31,7 @@
             <div class="about">
               <h2>Serving the Greater Seattle region since 1996.</h2>
               <p><strong>Pho</strong> is a Vietnamese rice noodle soup that invigorates and warms the soul. <br /> <br /> Try our homemade broth along with our selection of delicious beef cuts or vegetarian combinations.</p>
-              <a v-on:click="emitGoogleMapsEvent('Menu')" href="#menu_section"><button>See Menu</button></a>
+              <a v-on:click="emitGoogleMapsEvent('Menu')" href="#menu"><button>See Menu</button></a>
             </div>
           </div>
           <div class="media">
