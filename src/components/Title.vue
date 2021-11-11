@@ -3,11 +3,9 @@
     <div class="container">
       <div class="banner">
         <p class="text">
-          <span><strong>TEMPORARY HOURS: </strong> 7PM CLOSE EVERYDAY</span>
+          <span><strong>TEMPORARY HOURS: </strong> 8PM CLOSE EVERYDAY</span>
           <span class="separator">&nbsp;|&nbsp;</span>
           <span>DINE-IN & TAKEOUT</span>
-          <span class="separator">&nbsp;|&nbsp;</span>
-          <span>POSTMATES ONLY</span>
         </p>
       </div>
       <img class="half-circle" src="../assets/half-circle.svg" alt="Red Half Circle" />
