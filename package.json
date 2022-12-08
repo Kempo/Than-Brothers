@@ -11,7 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "sass-resources-loader": "^1.3.5",
     "vue": "^2.6.12",
     "vue-meta": "^2.4.0"
